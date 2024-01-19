@@ -1,9 +1,3 @@
-'''
-Date: 2023-09-22 17:26:41
-LastEditors: git config Kaike Zhang && git config kaikezhang99@gmail.com
-LastEditTime: 2023-09-22 18:35:44
-FilePath: /LLM4RobustRec/baseline_models/SASrec/encoders.py
-'''
 import torch
 import torch.nn as nn
 from torch.nn.init import xavier_normal_, constant_

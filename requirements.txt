@@ -1,0 +1,10 @@
+# Basic requirements
+python>=3.8
+numpy>=1.22.2
+scikit-learn>=1.0.2
+scipy>=1.8.0
+torch>=1.10.1
+
+# Optional requirements for Large Language Model encoding
+transformers>=4.35.2
+tqdm>=4.66.1

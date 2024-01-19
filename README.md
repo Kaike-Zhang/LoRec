@@ -1,7 +1,7 @@
 # LoRec
 
 ## Environment
-- **python >= 3.8**
+- **python >= 3.8** (Required for compatibility and correct JSON file ordering)
 - numpy >= 1.22.2
 - scikit-learn >= 1.0.2
 - scipy >= 1.8.0
@@ -27,4 +27,4 @@ If you want to use LLM for encoding:
 
    Replace `<backbone model>` with the name of your model, and `<dataset>` with the name of your dataset.
 
-3. If you need the embeddings of items and users encoded by the Large Language Model, you can send an email to @.
+3. To utilize LLM for encoding, ensure you have the optional dependencies installed. If you require embeddings of items and users encoded by a Large Language Model, please contact us for more information.

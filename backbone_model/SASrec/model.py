@@ -1,9 +1,3 @@
-'''
-Date: 2023-09-22 17:32:56
-LastEditors: git config Kaike Zhang && git config kaikezhang99@gmail.com
-LastEditTime: 2023-10-16 11:27:39
-FilePath: /LLM4Rec-Dec/baseline_models/SASrec/model.py
-'''
 import numpy as np
 import torch
 from torch import nn

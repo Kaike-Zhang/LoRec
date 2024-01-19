@@ -1,9 +1,3 @@
-'''
-Date: 2023-09-22 18:27:32
-LastEditors: git config Kaike Zhang && git config kaikezhang99@gmail.com
-LastEditTime: 2023-09-22 18:27:32
-FilePath: /LLM4RobustRec/baseline_models/SASrec/modules.py
-'''
 import torch.nn as nn
 import torch
 
