@@ -43,25 +43,19 @@ class LLMCL4rec(torch.nn.Module):
         input_embs_all = self.fc(interaction_list)
 
         non_zero_counts = log_mask.sum(dim=1)
-        L_prime = int(non_zero_counts.max().item() * 0.5)  # 计算L'
+        L_prime = int(non_zero_counts.max().item() * 0.5) 
 
-        # 确保 min_start_pos 是一个整数
         min_start_pos = int(log_mask.size(1) - non_zero_counts.max().item())
 
-        # 确保起始位置大于 min_start_pos
         start_pos = torch.randint(min_start_pos, log_mask.size(1) - L_prime, (1,)).item()
 
-        # 从 input_embs_all 中抽取子序列
         input_embs_1 = input_embs_all[:, start_pos:start_pos + L_prime, :]
         input_embs_2 = input_embs_all[:, start_pos:start_pos + L_prime, :]
 
-        # 获取对应的掩码
         mask_1 = log_mask[:, start_pos:start_pos + L_prime]
         mask_2 = log_mask[:, start_pos:start_pos + L_prime]
 
-        # 之前的代码...
 
-        # 计算权重向量w
         w = torch.ones((log_mask.size(0), 1), dtype=torch.float32).to(self.config["device"])
         w[(mask_1.sum(dim=1) == 0) | (mask_2.sum(dim=1) == 0)] = 0
 
@@ -130,25 +124,19 @@ class BasicCL4rec(torch.nn.Module):
         input_embs_all = self.item_emb(torch.LongTensor(np.array(interaction_list)).to(self.config["device"])) # B x L x D
 
         non_zero_counts = log_mask.sum(dim=1)
-        L_prime = int(non_zero_counts.max().item() * 0.5)  # 计算L'
+        L_prime = int(non_zero_counts.max().item() * 0.5) 
 
-        # 计算可以选择的最小起始位置
         min_start_pos = log_mask.size(1) - non_zero_counts.max().item()
 
-        # 确保起始位置大于 min_start_pos
         start_pos = torch.randint(min_start_pos, log_mask.size(1) - L_prime, (1,)).item()
 
-        # 从 input_embs_all 中抽取子序列
         input_embs_1 = input_embs_all[:, start_pos:start_pos + L_prime, :]
         input_embs_2 = input_embs_all[:, start_pos:start_pos + L_prime, :]
 
-        # 获取对应的掩码
         mask_1 = log_mask[:, start_pos:start_pos + L_prime]
         mask_2 = log_mask[:, start_pos:start_pos + L_prime]
 
-        # 之前的代码...
 
-        # 计算权重向量w
         w = torch.ones((log_mask.size(0), 1), dtype=torch.float32).to(self.config["device"])
         w[(mask_1.sum(dim=1) == 0) | (mask_2.sum(dim=1) == 0)] = 0
 
