@@ -52,7 +52,6 @@ class SelfAttention(nn.Module):
 
         self.attn_dropout = nn.Dropout(config["dropout_rate"])
 
-        # 做完self-attention 做一个前馈全连接 LayerNorm 输出
         self.dense = nn.Linear(config["hidden_units"], config["hidden_units"])
         self.LayerNorm = LayerNorm(config["hidden_units"], eps=1e-12)
         self.out_dropout = nn.Dropout(config["dropout_rate"])
