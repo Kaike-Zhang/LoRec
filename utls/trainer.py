@@ -382,7 +382,7 @@ class SASrecTrainer(BasicTrainer):
         _, sorted_indices = all_logits.sort(dim=1, descending=True)
         for user in range(len(pos)):
             for id, item in enumerate(targe_item):
-                if item in org_seq[i]:
+                if item in org_seq[u]:
                     continue
                 rank = (sorted_indices[user] == item-1).nonzero().item() + 1
                 rank_item[id] += rank
