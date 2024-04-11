@@ -55,6 +55,7 @@ class Trainer:
             all_user = list(range(0, self.dataset.n_users))
             user_list, fake_list = slice_lists(all_user, all_fake, self.config["batch_size"])
             for users, fakes in zip(user_list, fake_list):
+                self.fd_model.train()
                 self.opt_fd.zero_grad()
                 _, _, label, detections = self.dataset.get_fake_user_batch(neg_idx=users, fk_idx=fakes)
                 fd_predict = self.fd_model(detections)
