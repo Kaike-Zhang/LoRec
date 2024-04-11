@@ -1,4 +1,16 @@
 # LoRec
+This paper has been accepted by SIGIR24.
+
+## Authors
+- **Kaike Zhang**
+- Qi Cao
+- Yunfan Wu
+- Fei Sun
+- Huawei Shen
+- Xueqi Cheng
+
+## Abstract
+Sequential recommender systems stand out for their ability to capture users' dynamic interests and the patterns of item transitions. However, the inherent openness of sequential recommender systems renders them vulnerable to poisoning attacks, where fraudsters are injected into the training data to manipulate learned patterns. Traditional defense methods predominantly depend on predefined assumptions or rules extracted from specific known attacks, limiting their generalizability to unknown attacks. To solve the above problems, considering the rich open-world knowledge encapsulated in Large Language Models (LLMs), we attempt to introduce LLMs into defense methods to broaden the knowledge beyond limited known attacks. We propose **LoRec**, an innovative framework that employs **L**LM-Enhanced Calibration to strengthen the r**o**bustness of sequential **Rec**ommender systems against poisoning attacks. LoRec integrates an LLM-enhanced CalibraTor (LCT) that refines the training process of sequential recommender systems with knowledge derived from LLMs, applying a user-wise reweighting to diminish the impact of attacks. Incorporating LLMs' open-world knowledge, the LCT effectively converts the limited, specific priors or rules into a more general pattern of fraudsters, offering improved defenses against poisons. Our comprehensive experiments validate that LoRec, as a general framework, significantly strengthens the robustness of sequential recommender systems. 
 
 ## Environment
 - **python >= 3.8** (Required for compatibility and correct JSON file ordering)
@@ -27,4 +39,18 @@ If you want to use LLM for encoding:
 
    Replace `<backbone model>` with the name of your model, and `<dataset>` with the name of your dataset.
 
-3. To utilize LLM for encoding, ensure you have the optional dependencies installed. If you require embeddings of items and users encoded by a Large Language Model, please contact us for more information.
+3. To utilize LLM for encoding, ensure you have the optional dependencies installed. If you require embeddings of items and users encoded by a Large Language Model, feel free to contact us (at kaikezhang99@gmail.com or zhangkaike21s@ict.ac.cn).
+
+
+## Citation
+If you find our work useful, please cite our paper using the following BibTeX:
+
+@article{zhang2024lorec,
+	author = {Zhang, Kaike and Cao, Qi and Wu, Yunfan and Sun, Fei and Shen, Huawei and Cheng, Xueqi},
+	journal = {ArXiv},
+	year = {2024},
+	pages = {},
+	publisher = {},
+	title = {LoRec: Large {Language} {Model} for {Robust} {Sequential} {Recommendation} against {Poisoning} {Attacks}},
+	volume = {abs/2401.17723},
+}
