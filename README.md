@@ -1,5 +1,5 @@
 # LoRec
-This paper has been accepted by SIGIR24.
+This paper has been accepted by SIGIR24. [Link to the paper on Arxiv](https://arxiv.org/pdf/2401.17723)
 
 ## Authors
 - **Kaike Zhang**
@@ -45,6 +45,7 @@ If you want to use LLM for encoding:
 ## Citation
 If you find our work useful, please cite our paper using the following BibTeX:
 
+```bibtex
 @article{zhang2024lorec,
 	author = {Zhang, Kaike and Cao, Qi and Wu, Yunfan and Sun, Fei and Shen, Huawei and Cheng, Xueqi},
 	journal = {ArXiv},
