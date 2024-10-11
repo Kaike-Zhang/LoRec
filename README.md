@@ -1,5 +1,5 @@
 # LoRec
-This paper has been accepted by SIGIR24. [Link to the paper on Arxiv](https://arxiv.org/pdf/2401.17723)
+This paper has been accepted by SIGIR24. [Link to the paper on Arxiv](https://arxiv.org/pdf/2401.17723) / [Link to the paper on ACM Digital Library](https://dl.acm.org/doi/abs/10.1145/3626772.3657684)
 
 ## Authors
 - **Kaike Zhang**
@@ -56,7 +56,6 @@ If you find our work useful, please cite our paper using the following BibTeX:
 	volume = {abs/2401.17723},
 }
 
-```bibtex
 @inproceedings{zhang2024lorecSIGIR,
   title={LoRec: Combating Poisons with Large Language Model for Robust Sequential Recommendation},
   author={Zhang, Kaike and Cao, Qi and Wu, Yunfan and Sun, Fei and Shen, Huawei and Cheng, Xueqi},
