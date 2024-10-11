@@ -55,3 +55,12 @@ If you find our work useful, please cite our paper using the following BibTeX:
 	title = {LoRec: Large {Language} {Model} for {Robust} {Sequential} {Recommendation} against {Poisoning} {Attacks}},
 	volume = {abs/2401.17723},
 }
+
+```bibtex
+@inproceedings{zhang2024lorecSIGIR,
+  title={LoRec: Combating Poisons with Large Language Model for Robust Sequential Recommendation},
+  author={Zhang, Kaike and Cao, Qi and Wu, Yunfan and Sun, Fei and Shen, Huawei and Cheng, Xueqi},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1733--1742},
+  year={2024}
+}
